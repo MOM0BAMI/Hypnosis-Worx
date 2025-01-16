@@ -1,0 +1,170 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    color: #161F36;
+    background-color: #F2EDE2;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to bottom right, #BACBD8, #F2EDE2);
+    color: #161F36;
+}
+.header .logo {
+    width: 120px;
+}
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+.header p {
+    font-size: 1.2rem;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #BACBD8;
+}
+.navbar-nav .nav-link {
+    color: #161F36;
+    font-weight: bold;
+}
+.navbar-nav .nav-link:hover {
+    color: #0C8346;
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 20px;
+}
+.about-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.about-section p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #FFFFFF;
+}
+.profile-section .profile-pic {
+    flex: 1;
+    max-width: 200px;
+    margin-right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.profile-section .profile-bio {
+    flex: 2;
+}
+.profile-section .profile-bio h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.profile-section .profile-bio p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+/* Services Section */
+.services-section {
+    padding: 60px 20px;
+}
+.services-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+}
+.service-card {
+    background-color: #FFFFFF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.service-card h3 {
+    color: #0C8346;
+    font-size: 1.5rem;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 60px 20px;
+    background-color: #BACBD8;
+    color: #161F36;
+}
+.testimonials-section blockquote {
+    border-left: 4px solid #0C8346;
+    padding-left: 20px;
+    font-style: italic;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+}
+.contact-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.contact-section a {
+    color: #0C8346;
+    text-decoration: none;
+}
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* Back-to-Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0C8346;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+.back-to-top:hover {
+    background-color: #0A6F38;
+}
+
+/* Footer */
+.footer {
+    background-color: #161F36;
+    color: #FFFFFF;
+    padding: 15px 0;
+}
+.footer p {
+    margin: 0;
+}
