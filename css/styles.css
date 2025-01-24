@@ -6,53 +6,60 @@ body, h1, h2, h3, p, ul, li, a {
 }
 body {
     font-family: 'Lato', sans-serif;
-    color: #161F36;
-    background-color: #F2EDE2;
+    color: #0C8346;
+    background-color: #F8F5F0;
     line-height: 1.6;
 }
 
 /* Header */
 .header {
-    background: linear-gradient(to bottom right, #BACBD8, #F2EDE2);
-    color: #161F36;
+    background: linear-gradient(to bottom right, #DFF0E8, #F8F5F0);
+    color: #0C8346;
 }
-.header .logo {
-    width: 120px;
+.header .hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
 }
 .header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-top: 10px;
+    font-size: 2.8rem;
+    margin-top: 20px;
 }
 .header p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #BACBD8;
+    background-color: #DFF0E8;
+    border-bottom: 2px solid #0C8346;
 }
 .navbar-nav .nav-link {
-    color: #161F36;
+    color: #0C8346;
     font-weight: bold;
 }
 .navbar-nav .nav-link:hover {
-    color: #0C8346;
+    color: #083924;
 }
 
 /* About Section */
 .about-section {
     padding: 60px 20px;
+    background-color: #F8F5F0;
 }
 .about-section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 20px;
     text-align: center;
+    color: #083924;
 }
 .about-section p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 15px;
+    color: #0C8346;
 }
 
 /* Profile Section */
@@ -61,6 +68,7 @@ body {
     align-items: center;
     padding: 60px 20px;
     background-color: #FFFFFF;
+    border-top: 2px solid #083924;
 }
 .profile-section .profile-pic {
     flex: 1;
@@ -74,28 +82,34 @@ body {
 }
 .profile-section .profile-bio h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 10px;
+    color: #083924;
 }
 .profile-section .profile-bio p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 10px;
     line-height: 1.8;
+    color: #0C8346;
 }
 
 /* Services Section */
 .services-section {
     padding: 60px 20px;
+    background-color: #DFF0E8;
 }
 .services-section h2 {
     text-align: center;
     margin-bottom: 30px;
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    color: #083924;
 }
 .service-card {
     background-color: #FFFFFF;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #083924;
+    border-radius: 8px;
 }
 .service-card:hover {
     transform: translateY(-5px);
@@ -103,36 +117,47 @@ body {
 }
 .service-card h3 {
     color: #0C8346;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+.service-card p {
+    color: #083924;
+    font-size: 1rem;
 }
 
 /* Testimonials Section */
 .testimonials-section {
     padding: 60px 20px;
-    background-color: #BACBD8;
-    color: #161F36;
+    background-color: #F8F5F0;
+    color: #083924;
 }
 .testimonials-section blockquote {
     border-left: 4px solid #0C8346;
     padding-left: 20px;
     font-style: italic;
+    color: #083924;
 }
 
 /* Contact Section */
 .contact-section {
     padding: 60px 20px;
+    background-color: #FFFFFF;
+    border-top: 2px solid #083924;
 }
 .contact-section h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 20px;
+    color: #083924;
 }
 .contact-section a {
     color: #0C8346;
     text-decoration: none;
+    font-weight: bold;
 }
 .contact-section a:hover {
     text-decoration: underline;
+    color: #083924;
 }
 
 /* Back-to-Top Button */
@@ -156,14 +181,16 @@ body {
     transition: background-color 0.3s;
 }
 .back-to-top:hover {
-    background-color: #0A6F38;
+    background-color: #083924;
 }
 
 /* Footer */
 .footer {
-    background-color: #161F36;
+    background-color: #083924;
     color: #FFFFFF;
     padding: 15px 0;
+    text-align: center;
+    border-top: 4px solid #0C8346;
 }
 .footer p {
     margin: 0;
