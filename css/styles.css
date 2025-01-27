@@ -1,60 +1,93 @@
-/* General Reset */
-body, h1, h2, h3, p, ul, li, a {
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: 'Lato', sans-serif;
-    color: #0C8346;
-    background-color: #F8F5F0;
-    line-height: 1.6;
+    background-color: #f6f6f6;
+    color: #333;
 }
 
-/* Header */
-.header {
-    background: linear-gradient(to bottom right, #DFF0E8, #F8F5F0);
-    color: #0C8346;
+/* Header Styles */
+header {
+    background-color: #083924;
+    padding: 20px;
+    color: white;
+    text-align: center;
 }
-
-.header h1 {
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    margin-top: 20px;
-}
-.header p {
-    font-size: 1.4rem;
 }
 
-/* Navbar */
-.navbar {
-    background-color: #DFF0E8;
-    border-bottom: 2px solid #0C8346;
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #083924;
+    padding: 15px 20px;
 }
-.navbar-nav .nav-link {
-    color: #0C8346;
-    font-weight: bold;
+nav a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
 }
-.navbar-nav .nav-link:hover {
-    color: #083924;
+nav a:hover {
+    background-color: #0C8346;
+    transition: background-color 0.3s ease;
 }
+
+/* Banner and Logo Styles */
+/* Logo Styles */
+.logo-container {
+    position: absolute; /* Position it relative to the header */
+    top: 10px; /* Add space from the top edge */
+    left: 10px; /* Add space from the left edge */
+    width: 80px; /* Keep the logo size consistent */
+    height: 80px;
+    z-index: 10; /* Ensure it stays on top of other elements */
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Banner Styles */
+.hero-img {
+    width: 100%; /* Stretch the image across the screen */
+    height: 300px; /* Keep a consistent height */
+    object-fit: cover; /* Ensure the image covers the area */
+    position: relative;
+    z-index: 0;
+}
+
 
 /* About Section */
 .about-section {
     padding: 60px 20px;
-    background-color: #F8F5F0;
+    background-color: #DFF0E8;
+    text-align: center;
 }
 .about-section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin-bottom: 20px;
-    text-align: center;
     color: #083924;
+    font-weight: bold;
 }
 .about-section p {
     font-size: 1.1rem;
     margin-bottom: 15px;
     color: #0C8346;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Profile Section */
@@ -63,7 +96,8 @@ body {
     align-items: center;
     padding: 60px 20px;
     background-color: #FFFFFF;
-    border-top: 2px solid #083924;
+    border-top: 3px solid #083924;
+    justify-content: space-between;
 }
 .profile-section .profile-pic {
     flex: 1;
@@ -71,15 +105,17 @@ body {
     margin-right: 20px;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
 .profile-section .profile-bio {
     flex: 2;
 }
 .profile-section .profile-bio h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin-bottom: 10px;
     color: #083924;
+    font-weight: bold;
 }
 .profile-section .profile-bio p {
     font-size: 1.1rem;
@@ -97,14 +133,18 @@ body {
     text-align: center;
     margin-bottom: 30px;
     font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     color: #083924;
+    font-weight: bold;
 }
 .service-card {
-    background-color: #FFFFFF;
+    background-color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #083924;
     border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 .service-card:hover {
     transform: translateY(-5px);
@@ -112,12 +152,14 @@ body {
 }
 .service-card h3 {
     color: #0C8346;
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 .service-card p {
     color: #083924;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* Testimonials Section */
@@ -131,81 +173,108 @@ body {
     padding-left: 20px;
     font-style: italic;
     color: #083924;
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 60px 20px;
-    background-color: #FFFFFF;
-    border-top: 2px solid #083924;
-}
-.contact-section h2 {
-    text-align: center;
-    font-size: 2.2rem;
+    font-size: 1.1rem;
     margin-bottom: 20px;
-    color: #083924;
+    line-height: 1.8;
 }
-.contact-section a {
-    color: #0C8346;
-    text-decoration: none;
-    font-weight: bold;
-}
-.contact-section a:hover {
-    text-decoration: underline;
+.testimonials-section blockquote p {
+    font-size: 1.1rem;
     color: #083924;
 }
 
-/* Back-to-Top Button */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #0C8346;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    z-index: 1000;
-    transition: background-color 0.3s;
-}
-.back-to-top:hover {
+/* Footer Styles */
+footer {
     background-color: #083924;
-}
-
-/* Footer */
-.footer {
-    background-color: #083924;
-    color: #FFFFFF;
-    padding: 15px 0;
+    color: white;
+    padding: 20px;
     text-align: center;
-    border-top: 4px solid #0C8346;
 }
-.footer p {
+footer p {
     margin: 0;
+    font-size: 1rem;
 }
 
-/* Small Logo in Top-Right Corner */
-.hero-img {
-    position: fixed; /* Ensures the logo stays in the top-right corner, even when scrolling */
-    top: 10px; /* Adjusts vertical spacing */
-    right: 10px; /* Adjusts horizontal spacing */
-    width: 60px; /* Small logo size */
-    height: auto; /* Maintains aspect ratio */
-    z-index: 1000; /* Keeps it above all other elements */
-    border-radius: 50%; /* Optional: Makes the logo circular if desired */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a soft shadow for a polished look */
-    cursor: pointer; /* Makes the logo clickable (useful if linking it to home) */
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-section .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .service-card {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+    }
+    .banner h2 {
+        font-size: 2rem;
+    }
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
 }
 
-/* Optional Hover Effect for Logo */
-.hero-img:hover {
-    transform: scale(1.1); /* Slightly enlarges the logo on hover */
-    transition: transform 0.3s ease-in-out; /* Smooth animation */
+/* Contact Form Styles */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    background-color: #FFFFFF; /* White background for contrast */
+    border: 1px solid #0C8346; /* Green border for consistency */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#contact-form div {
+    margin-bottom: 15px;
+}
+
+#contact-form label {
+    display: block; /* Place label above input fields */
+    font-weight: bold;
+    color: #083924; /* Dark green for label text */
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%; /* Make inputs and textarea stretch across */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #083924; /* Dark green border for inputs */
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #0C8346; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(12, 131, 70, 0.4); /* Add glow effect */
+}
+
+#contact-form textarea {
+    min-height: 120px; /* Ensure adequate space for message input */
+    resize: vertical; /* Allow resizing only vertically */
+}
+
+#contact-form button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #0C8346; /* Green button background */
+    color: #FFFFFF; /* White text on button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #083924; /* Darker green on hover */
 }
