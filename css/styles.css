@@ -16,12 +16,7 @@ body {
     background: linear-gradient(to bottom right, #DFF0E8, #F8F5F0);
     color: #0C8346;
 }
-.header .hero-img {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-}
+
 .header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
@@ -194,4 +189,23 @@ body {
 }
 .footer p {
     margin: 0;
+}
+
+/* Small Logo in Top-Right Corner */
+.hero-img {
+    position: fixed; /* Ensures the logo stays in the top-right corner, even when scrolling */
+    top: 10px; /* Adjusts vertical spacing */
+    right: 10px; /* Adjusts horizontal spacing */
+    width: 60px; /* Small logo size */
+    height: auto; /* Maintains aspect ratio */
+    z-index: 1000; /* Keeps it above all other elements */
+    border-radius: 50%; /* Optional: Makes the logo circular if desired */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a soft shadow for a polished look */
+    cursor: pointer; /* Makes the logo clickable (useful if linking it to home) */
+}
+
+/* Optional Hover Effect for Logo */
+.hero-img:hover {
+    transform: scale(1.1); /* Slightly enlarges the logo on hover */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
 }
