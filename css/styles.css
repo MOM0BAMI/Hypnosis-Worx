@@ -3,13 +3,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f6f6f6;
-    color: #333;
+    background-color: #303642;
+    color: white;
 }
 
 /* Header Styles */
 header {
-    background-color: #083924;
+    background-color: #303642;
     padding: 20px;
     color: white;
     text-align: center;
@@ -18,6 +18,7 @@ header h1 {
     font-size: 2.5rem;
     margin: 0;
     font-family: 'Playfair Display', serif;
+    color: #00A79D;
 }
 
 /* Navigation Styles */
@@ -25,8 +26,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #083924;
+    background-color: white;
+    text-emphasis-color: #DC7D51;
     padding: 15px 20px;
+    color: white;
 }
 nav a {
     color: white;
@@ -36,7 +39,7 @@ nav a {
     border-radius: 5px;
 }
 nav a:hover {
-    background-color: #0C8346;
+    background-color: #DC7D51;
     transition: background-color 0.3s ease;
 }
 
@@ -70,20 +73,20 @@ nav a:hover {
 /* About Section */
 .about-section {
     padding: 60px 20px;
-    background-color: #DFF0E8;
+    background-color: #303642;
     text-align: center;
 }
 .about-section h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.4rem;
     margin-bottom: 20px;
-    color: #083924;
+    color: #00A79D;
     font-weight: bold;
 }
 .about-section p {
     font-size: 1.1rem;
     margin-bottom: 15px;
-    color: #0C8346;
+    color: white;
     line-height: 1.8;
     max-width: 800px;
     margin-left: auto;
@@ -95,8 +98,8 @@ nav a:hover {
     display: flex;
     align-items: center;
     padding: 60px 20px;
-    background-color: #FFFFFF;
-    border-top: 3px solid #083924;
+    background-color: #303642;
+    border-top: 3px solid whitesmoke;
     justify-content: space-between;
 }
 .profile-section .profile-pic {
@@ -114,78 +117,116 @@ nav a:hover {
     font-family: 'Playfair Display', serif;
     font-size: 2.4rem;
     margin-bottom: 10px;
-    color: #083924;
+    color: #00A79D;
     font-weight: bold;
 }
 .profile-section .profile-bio p {
     font-size: 1.1rem;
     margin-bottom: 10px;
     line-height: 1.8;
-    color: #0C8346;
+    color: white;
 }
 
-/* Services Section */
-.services-section {
-    padding: 60px 20px;
-    background-color: #DFF0E8;
+/* Services Section Styling */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for 4 services */
+    gap: 20px; /* Space between cards */
+    justify-content: center;
+    padding: 20px; /* Add padding to the container */
 }
-.services-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
-    color: #083924;
-    font-weight: bold;
-}
+
 .service-card {
-    background-color: white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #083924;
-    border-radius: 8px;
+    background: #303642;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    border: 2px solid #0C8346; /* Thicker border with a green color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-bottom: 20px;
-}
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-.service-card h3 {
-    color: #0C8346;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-.service-card p {
-    color: #083924;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    height: auto; /* Remove fixed height */
+    min-height: 400px; /* Set a minimum height */
 }
 
-/* Testimonials Section */
-.testimonials-section {
-    padding: 60px 20px;
-    background-color: #F8F5F0;
-    color: #083924;
+.service-card:hover {
+    transform: translateY(-5px); /* Slightly lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
-.testimonials-section blockquote {
-    border-left: 4px solid #0C8346;
-    padding-left: 20px;
-    font-style: italic;
-    color: #083924;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    line-height: 1.8;
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
 }
-.testimonials-section blockquote p {
-    font-size: 1.1rem;
-    color: #083924;
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out; /* Smooth transition */
+    text-align: left;
+    width: 100%; /* Ensure the content takes up the full width */
+}
+
+.collapsible-toggle {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #303642;
+    color: #DC7D51;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1; /* Ensure the button stays on top */
+    transition: background-color 0.3s ease;
+}
+
+.collapsible-toggle:hover {
+    background-color: #303642; /* Darker blue on hover */
+}
+
+.collapsible-toggle:focus {
+    outline: none;
+}
+
+/* Adjust text size for collapsible content */
+.collapsible-content p,
+.collapsible-content ul {
+    font-size: 0.9rem; /* Reduce font size */
+    line-height: 1.5; /* Adjust line height for better readability */
+    margin: 10px 0; /* Add some margin for better spacing */
+}
+
+.collapsible-content ul {
+    padding-left: 20px; /* Add some padding to the list */
+}
+
+/* Ensure the expanded content is scrollable */
+.service-card.open .collapsible-content {
+    max-height: 500px; /* Adjust based on your content */
+    overflow-y: auto; /* Add scrollbar if content overflows */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (min-width: 769px) {
+    .service-card.open .collapsible-content {
+        max-height: 1000px; /* Allow more space for content on larger screens */
+    }
+
+    .service-card {
+        max-width: 90%; /* Ensure cards don't overflow on small screens */
+        margin: 0 auto; /* Center the cards */
+    }
 }
 
 /* Footer Styles */
 footer {
-    background-color: #083924;
-    color: white;
+    background-color: #303642;
+    color: #00A79D;
     padding: 20px;
     text-align: center;
 }
@@ -211,6 +252,7 @@ footer p {
     }
     .banner h2 {
         font-size: 2rem;
+        color: #00A79D;
     }
     .logo {
         width: 60px;
@@ -223,7 +265,7 @@ footer p {
     max-width: 600px;
     margin: 0 auto; /* Center the form horizontally */
     padding: 20px;
-    background-color: #FFFFFF; /* White background for contrast */
+    background-color: #303642; /* White background for contrast */
     border: 1px solid #0C8346; /* Green border for consistency */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -267,7 +309,7 @@ footer p {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    background-color: #0C8346; /* Green button background */
+    background-color: #303642; /* Green button background */
     color: #FFFFFF; /* White text on button */
     border: none;
     border-radius: 4px;
@@ -276,5 +318,311 @@ footer p {
 }
 
 #contact-form button:hover {
+    background-color: #303642; /* Darker green on hover */
+}
+
+#contact-section {
+    background-color: #303642;
+}
+
+/* Main styling */
+.testimonials-section {
+    padding: 2rem;
+}
+
+.testimonial-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-item {
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.testimonial-header {
+    background-color: #303642;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+}
+
+.testimonial-body {
+    padding: 1rem;
+    display: none; /* Initially hidden */
+    background-color: #303642;
+}
+
+.testimonial-item.open .testimonial-body {
+    display: block; /* Show when open */
+}
+
+.testimonial-header:hover {
+    background-color: #303642;
+}
+
+.testimonial-item.open .testimonial-header {
+    background-color: #303642;
+}
+
+/* Animation for accordion */
+.testimonial-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.testimonial-item.open .testimonial-body {
+    max-height: 500px; /* Adjust based on content */
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed; /* Fixed position so it stays in place while scrolling */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px; /* Distance from the right of the screen */
+    background-color: #0C8346; /* Green background color (matches your theme) */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Make the button circular */
+    width: 50px; /* Set width */
+    height: 50px; /* Set height */
+    font-size: 24px; /* Increase arrow size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    display: none; /* Hide the button by default */
+}
+
+.back-to-top:hover {
     background-color: #083924; /* Darker green on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+.back-to-top:active {
+    transform: scale(0.9); /* Slightly shrink the button when clicked */
+}
+
+/* Show the button when the user scrolls down */
+.back-to-top.show {
+    display: block; /* Show the button */
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #303642;
+    color: white;
+}
+
+/* Header Styles */
+header {
+    background-color: #303642;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    color: #00A79D;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #303642;
+    padding: 15px 20px;
+}
+
+nav a {
+    color: #DC7D51;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #DC7D51;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Section Headers */
+.about-section h2,
+.profile-section h2,
+.services-section h2,
+.testimonials-section h2,
+.contact-section h2 {
+    color: #00A79D;
+}
+
+/* Service Cards */
+.service-card {
+    background-color: #303642;
+    border: 2px solid #00A79D;
+}
+
+.service-card h3 {
+    color: #DC7D51;
+}
+
+.service-card p {
+    color: white;
+}
+
+/* Testimonials */
+.testimonial-header {
+    background-color: #303642;
+    color: #DC7D51;
+}
+
+.testimonial-body {
+    background-color: #303642;
+    color: white;
+}
+
+.testimonial-item {
+    border: 1px solid #00A79D;
+}
+
+/* Contact Form */
+#contact-form {
+    background-color: #303642;
+    border: 1px solid #00A79D;
+}
+
+#contact-form label {
+    color: white;
+}
+
+#contact-form button {
+    background-color: #00A79D;
+    color: white;
+}
+
+#contact-form button:hover {
+    background-color: #DC7D51;
+}
+
+/* Footer */
+footer {
+    background-color: #303642;
+    color: #00A79D;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    background-color: #00A79D;
+}
+
+.back-to-top:hover {
+    background-color: #DC7D51;
+}
+
+/* Ensure all paragraph text is white */
+p {
+    color: white;
+}
+
+/* Collapsible toggle buttons */
+.collapsible-toggle {
+    background-color: #303642;
+    color: #DC7D51;
+    border: 1px solid #DC7D51;
+}
+
+.collapsible-toggle:hover {
+    background-color: #DC7D51;
+    color: white;
+}
+
+/* Navbar specific styles */
+.navbar {
+    background-color: #303642;
+    padding: 15px 0;
+}
+
+/* Center the navbar items */
+.navbar-nav.mx-auto {
+    text-align: center;
+}
+
+/* Style each nav item */
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+/* Style the nav links */
+.navbar-nav .nav-link {
+    color: #DC7D51 !important;
+    font-size: 1.1rem;
+    padding: 8px 16px !important;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hover state for nav links */
+.navbar-nav .nav-link:hover {
+    background-color: #DC7D51;
+    color: white !important;
+}
+
+/* Active state for nav links */
+.navbar-nav .nav-link.active {
+    background-color: #DC7D51;
+    color: white !important;
+}
+
+/* Mobile navbar toggler */
+.navbar-toggler {
+    border-color: #DC7D51;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(220, 125, 81, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Ensure proper spacing for sections */
+#profile,
+#about,
+#services,
+#testimonials,
+#contact {
+    padding-top: 60px;
+    margin-top: -60px;
+}
+
+/* Add smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Make navbar sticky */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+    
+    .navbar-collapse {
+        background-color: #303642;
+        padding: 10px;
+    }
 }
